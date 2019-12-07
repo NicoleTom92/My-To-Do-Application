@@ -1,6 +1,6 @@
 import React from "react"; 
 
-class DeveloperCount extends React.Component {
+class TaskCount extends React.Component {
     render () {
         return (
             <p>Tasks Left to Complete: 3</p>
@@ -8,4 +8,4 @@ class DeveloperCount extends React.Component {
     }
 }
 
-export default DeveloperCount;
+export default TaskCount;

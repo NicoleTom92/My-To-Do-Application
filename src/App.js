@@ -1,18 +1,17 @@
 import React from 'react';
-import DeveloperCount from "./DeveloperCount"
+import TaskCount from "./TaskCount"
 import Heading from "./Heading"
 import './App.css';
-import Developer from "./Developer"
+import ToDoTable from "./ToDoTable"
 
 
 function App() {
   return (
     <div className="App">
       <Heading/>
-      <DeveloperCount />
+      <TaskCount />
       <div className ="container">
-      <Developer name="Task 1" skills={["To Add"]}/>
-      
+      <ToDoTable name="Task 1" skills={["To Add"]}/>
       
     </div>
     </div>
