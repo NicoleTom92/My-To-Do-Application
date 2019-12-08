@@ -3,7 +3,7 @@ import React from "react";
 class TaskCount extends React.Component {
     render () {
         return (
-            <p>Tasks Left to Complete: 3</p>
+            <div class = "Tasks">Tasks Left to Complete: 3</div>
         );
     }
 }

@@ -1,18 +1,58 @@
-
 body {
   background-image: url("/background.jpeg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-size: 1500px;
     font-family: "Indie Flower" , cursive;
+    
   }
+
+.h {
+  text-align: left;
+  left: 80px;
+  margin: 30px auto;
+  margin-left: 30px;
+  color: 	rgb(3, 3, 3);
+  border-radius: 100px;
+  font-family: 'Indie Flower', cursive;
+  font-size: xx-large;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  }
+
+  .input-group {
+   margin-left: 30px;
+   margin-top: 15px;
+   width: inherit;
+   margin-right: 50px;
+    }
+  
+  .container {
+    width:75%;
+    text-align:left;
+    margin-left: 20px;
+    margin-top: 20px;
+    column-gap: 30px;
+  }
+
+  .tasktocomplete {
+    text-align: left;
+  }
+
+.Tasks {
+  text-align: left;
+  left: 80px;
+  margin-left: 30px;
+  margin-top: -40px;
+  font-size: large;
+}
+
 
 button {
   background-color: rgba(165, 42, 42, 0.308);
   border: 1.5px solid black; 
   font-size: medium;
   font-family: 'Indie Flower', cursive;
+  border-radius: 4px 3px;
+
 }
 
 button:hover {
