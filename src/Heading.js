@@ -4,7 +4,7 @@ class Heading extends React.Component {
 
     render() {
         return (
-            <div class = "h">My To Do Application</div>
+            <div class="h">My To Do Application</div>
         )
 
 

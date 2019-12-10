@@ -1,9 +1,9 @@
-import React from "react"; 
+import React from "react";
 
 class TaskCount extends React.Component {
-    render () {
+    render() {
         return (
-            <div class = "Tasks">Tasks Left to Complete: 3</div>
+            <div class="Tasks">Tasks Left to Complete: 3</div>
         );
     }
 }

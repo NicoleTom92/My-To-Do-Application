@@ -18,24 +18,20 @@ body {
   margin-top: 70px;
   }
 
+  .Heading {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    
+  }
+
   .input-group {
    margin-left: 30px;
    margin-top: 15px;
    width: inherit;
    margin-right: 50px;
     }
-  
-  .container {
-    width:75%;
-    text-align:left;
-    margin-left: 20px;
-    margin-top: 20px;
-    column-gap: 30px;
-  }
 
-  .tasktocomplete {
-    text-align: left;
-  }
 
 .Tasks {
   text-align: left;
