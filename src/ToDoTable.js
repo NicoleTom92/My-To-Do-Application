@@ -6,9 +6,11 @@ class ToDoTable extends React.Component {
     render() {
         return (
             
+           
             <div className="container">
+                <div className="col-8">
             <div className = "row">
-                <div className="col-6">
+                <div className="col-8">
                     <p>{this.props.task}</p>
                 </div>
                 <div className="col-2">
@@ -19,6 +21,7 @@ class ToDoTable extends React.Component {
             </div>
             </div>
             </div>
+           </div>
             
 
         )
