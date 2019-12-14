@@ -4,13 +4,13 @@ body {
     font-family: "Indie Flower" , cursive;
   }
 
-.Heading {
-  text-align: left;
-  margin-top: 100px;
-  margin-left: -70px;
-  font-size: x-large;
-  margin-bottom: 20px;
-}
+  .Heading {
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 30px;
+    font-size: x-large;
+    margin-bottom: 20px;
+  }
 
 
 .input-group {
@@ -18,31 +18,32 @@ body {
 }
 
 .Tasksremaining {
-  margin-left: -70px;
+  margin-left: 30px;
   text-align: left;
   margin-top: 20px;
   font-size: larger;
 }
 
 .taskbox {
-  margin-left: -70px;
+  margin-left: 30px;
 }
 
-
-.button {
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-.button:hover {
-  background-color: lightsalmon;
-  color:black;
-}
 
 .container {
     text-align: left;
-   
-
     
 }
 
+.h1 {
+  text-align: left;
+  font-size: larger;
+  margin-left: 50px;
+ text-decoration: underline;
+}
+
+.h2 {
+  text-align: left;
+  font-size: larger;
+  margin-left: 50px;
+  text-decoration: underline;
+}

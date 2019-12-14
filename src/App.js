@@ -11,12 +11,12 @@ import Addsection from "./Addsection"
 class App extends React.Component {
   state = {
     tasks: [
-      { name: "Task 1", available: true, dateJoined: "2019-12-02", id: 1 },
-      { name: "Task 2", available: true, dateJoined: "2019-11-30", id: 2 },
-      { name: "Task 3", available: false, dateJoined: "2019-12-01", id: 3 },
-      { name: "Task 4", available: true, dateJoined: "2019-10-22", id: 4 },
-      { name: "Task 5", available: false, dateJoined: "2019-12-09", id: 5 },
-      { name: "Task 6", available: false, dateJoined: "2019-12-09", id: 5 },
+      { name: "Task 1", available: true, id: 1 },
+      { name: "Task 2", available: true, id: 2 },
+      { name: "Task 3", available: false, id: 3 },
+      { name: "Task 4", available: true, id: 4 },
+      { name: "Task 5", available: false, id: 5 },
+      { name: "Task 6", available: false, id: 6 },
     ],
   }
 
@@ -32,11 +32,11 @@ class App extends React.Component {
 
     return (
       <div className="App">
-       
           <Heading />
           <Addsection />
           <TaskCount count={this.state.tasks.length} />
           
+          <div className="h1">In Progress Tasks:</div>
           {Taskstocomplete.map(tasks => {
 
             return (
@@ -44,28 +44,25 @@ class App extends React.Component {
                 key={tasks.id}
                 available={tasks.available}
                 name={tasks.name}
-                dateJoined={tasks.dateJoined}
+            
               />
             )
           })}
-       
-      
-
-       
+          
+          <div className="h2">Tasks Completed:</div>
         {Taskscompleted.map(tasks => {
           return (
             <Tables
               key={tasks.id}
               available={tasks.available}
               name={tasks.name}
-              dateJoined={tasks.dateJoined}
+             
             />
           )
         })}
 
       </div>
-    
-    
+      
 
     );
   }

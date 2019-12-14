@@ -2,14 +2,14 @@ import React from "react";
 
 class Addsection extends React.Component {
     state = {
-        task: "", 
+        tasks: "", 
         dateCompleted:"2019-12-09" 
     };
 
-    updateDeveloperName = (event)  => {
+    updatetask = (event)  => {
         console.log(event.target.value)
 this.setState( {
-    developerName: event.target.value 
+    task: event.target.value 
 });
     };
 
