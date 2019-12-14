@@ -2,56 +2,47 @@ body {
   background-image: url("/background.jpeg");
     background-size: 1500px;
     font-family: "Indie Flower" , cursive;
-    
   }
 
-.h {
+.Heading {
   text-align: left;
-  left: 80px;
-  margin: 30px auto;
-  margin-left: 30px;
-  color: 	rgb(3, 3, 3);
-  border-radius: 100px;
-  font-family: 'Indie Flower', cursive;
-  font-size: xx-large;
-  margin-bottom: 50px;
-  margin-top: 70px;
-  }
+  margin-top: 100px;
+  margin-left: -70px;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
 
-  .Heading {
+
+.input-group {
+  margin-left: -70px;
+}
+
+.Tasksremaining {
+  margin-left: -70px;
+  text-align: left;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+.taskbox {
+  margin-left: -70px;
+}
+
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: lightsalmon;
+  color:black;
+}
+
+.container {
     text-align: left;
-    margin-left: 30px;
-    margin-top: 30px;
+   
+
     
-  }
-
-  .input-group {
-   margin-left: 30px;
-   margin-top: 15px;
-   width: inherit;
-   margin-right: 50px;
-    }
-
-
-.Tasks {
-  text-align: left;
-  left: 80px;
-  margin-left: 30px;
-  margin-top: -40px;
-  font-size: large;
 }
 
-
-button {
-  background-color: rgba(165, 42, 42, 0.308);
-  border: 1.5px solid black; 
-  font-size: medium;
-  font-family: 'Indie Flower', cursive;
-  border-radius: 4px 3px;
-
-}
-
-button:hover {
-  cursor: pointer;
-  background-color:rgba(238, 103, 54, 0.568);
-}
