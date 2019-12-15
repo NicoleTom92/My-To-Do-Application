@@ -35,10 +35,9 @@ class App extends React.Component {
           <Heading />
           <Addsection />
           <TaskCount count={this.state.tasks.length} />
-          
+    
           <div className="h1">In Progress Tasks:</div>
           {Taskstocomplete.map(tasks => {
-
             return (
               <Tables
                 key={tasks.id}
