@@ -6,26 +6,17 @@ body {
 
   .Heading {
     text-align: left;
-    margin-top: 100px;
-    margin-left: 30px;
+    margin-top: 130px;
     font-size: x-large;
     margin-bottom: 20px;
   }
 
 
-.input-group {
-  margin-left: -70px;
-}
-
 .Tasksremaining {
-  margin-left: 30px;
   text-align: left;
   margin-top: 20px;
   font-size: larger;
-}
-
-.taskbox {
-  margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 
@@ -34,16 +25,5 @@ body {
     
 }
 
-.h1 {
-  text-align: left;
-  font-size: larger;
-  margin-left: 50px;
- text-decoration: underline;
-}
 
-.h2 {
-  text-align: left;
-  font-size: larger;
-  margin-left: 50px;
-  text-decoration: underline;
-}
+ 
