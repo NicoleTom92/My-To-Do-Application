@@ -3,19 +3,26 @@ import React from "react";
 class Addsection extends React.Component {
     state = {
         tasks: "",
-        dateCompleted: ""
+        furtherinfo: "",
+        dateCompleted: "2020-01-01",
     };
 
-    updatetask = (event) => {
+    updateTasks = (event) => {
+        console.log (event.target.value)
         this.setState({
             tasks: event.target.value
         });
     };
 
+    updatefurtherinfo = (event) => {
+        this.setState ({
+            furtherinfo: event.target.value
+        });
+    };
 
     updateDate = event => {
         this.setState({
-            date: event.target.value
+            dateCompleted: event.target.value
         })
     }
 
@@ -35,9 +42,9 @@ class Addsection extends React.Component {
 
     render() {
         return (
-            <div className="taskbox">
+            
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-4">
                         <input type="text"
                             onChange={this.updateTasks}
                             value={this.state.tasks}
@@ -45,7 +52,16 @@ class Addsection extends React.Component {
                             placeholder="Enter Task" />
                     </div>
 
-                    <div className="col-4">
+                    <div className="col-3">
+                    <input type="text"
+                        onChange={this.updatefurtherinfo}
+                        value={this.state.furtherinfo}
+                        className="form-control"
+                        placeholder=" Enter Comments" />
+                </div>
+
+
+                    <div className="col-3">
                         <input type="date"
                             className="form-control"
                             value={this.state.dateCompleted}
@@ -58,7 +74,7 @@ class Addsection extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            
 
         )
     }

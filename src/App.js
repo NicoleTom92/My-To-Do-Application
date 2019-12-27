@@ -9,9 +9,9 @@ import Addsection from "./Addsection"
 class App extends React.Component {
   state = {
     tasks: [
-      { name: "Task 1", available: true, dateCompleted: "01-01-2020", id: uuid() },
-      { name: "Task 2", available: true, dateCompleted: "01-02-2020", id: uuid()  },
-      { name: "Task 3", available: false, dateCompleted: "01-04-2020", id: uuid()  },
+      { name: "Task 1", furtherinfo:["Add comments"], available: true, dateCompleted: "01-01-2020", id: uuid() },
+      { name: "Task 2", furtherinfo:["Add comments"], available: true, dateCompleted: "01-02-2020", id: uuid()  },
+      { name: "Task 3", furtherinfo:["Add comments"], available: false, dateCompleted: "01-04-2020", id: uuid()  },
     ],
   }
 
@@ -25,10 +25,11 @@ class App extends React.Component {
     });
   }
 
-  addNewTask = (name, dateCompleted) => {
-    
+  addNewTask = (name, furtherinfo , dateCompleted) => {
+    console.log (name, furtherinfo, dateCompleted);
     const newTask = {
       name: name,
+      furtherinfo: furtherinfo,
       available: true,
       dateCompleted: dateCompleted,
       id: uuid()
@@ -59,7 +60,7 @@ class App extends React.Component {
           <Addsection addNewTaskFunc={this.addNewTask}/>
           <TaskCount count={this.state.tasks.length} />
     
-          <h4>In Progress Tasks:</h4>
+          <h5><u>In Progress Tasks:</u></h5>
           {Taskstocomplete.map(tasks => {
 
             return (
@@ -68,14 +69,15 @@ class App extends React.Component {
                 key={tasks.id}
                 available={tasks.available}
                 name={tasks.name}
-                dateJoined={tasks.dateJoined}
+                furtherinfo={tasks.furtherinfo}
+                dateCompleted={tasks.dateCompleted}
                 id={tasks.id}
             
               />
             )
           })}
           
-          <h4>Tasks Completed:</h4>
+          <h5><u>Tasks Completed:</u></h5>
         {Taskscompleted.map(tasks => {
           return (
             <Tables
@@ -83,6 +85,7 @@ class App extends React.Component {
               key={tasks.id}
               available={tasks.available}
               name={tasks.name}
+              furtherinfo={tasks.furtherinfo}
               dateCompleted={tasks.dateCompleted}
               id={tasks.id}
             />

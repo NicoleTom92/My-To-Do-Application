@@ -5,7 +5,7 @@ body {
   }
 
   .Heading {
-    text-align: left;
+    
     margin-top: 130px;
     font-size: x-large;
     margin-bottom: 20px;
@@ -21,9 +21,12 @@ body {
 
 
 .container {
-    text-align: left;
+    text-align: left 20px; 
     
 }
 
+.book-button {
+  width: 77px;
+}
 
  

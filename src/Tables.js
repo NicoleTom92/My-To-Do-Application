@@ -9,10 +9,13 @@ class Tables extends React.Component {
         return (
             
             <div className="row">
-                <div className="col-12 col-sm-2">
+                <div className="col-12 col-sm-3">
                     <p>{this.props.name}</p>
                 </div>
-                
+                <div className="col-12 col-sm-2">
+                    <p> {this.props.furtherinfo} </p>
+                </div>
+
                 <div className="col-12 col-sm-2">
                     <p>{this.props.dateCompleted}</p>
                 </div>
@@ -26,6 +29,7 @@ class Tables extends React.Component {
                         <button className="btn btn-dark">Restore
                         </button>
                     }
+                    
                 </div>
             </div>
 
