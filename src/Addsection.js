@@ -8,7 +8,6 @@ class Addsection extends React.Component {
     };
 
     updateTasks = (event) => {
-        console.log (event.target.value)
         this.setState({
             tasks: event.target.value
         });

@@ -3,7 +3,9 @@ import React from "react"
 class Tables extends React.Component {
     handleDelete = () => {
         this.props.deleteTaskFunc(this.props.id);
-    }
+}
+
+   
 
     render() {
         return (
@@ -25,7 +27,7 @@ class Tables extends React.Component {
                 </div>
                 <div className="col-12 col-sm-2">
                     {this.props.available === true ?
-                        <button className="btn btn-dark book-button">Add</button> :
+                        <button className="btn btn-dark book-button" onClick={youclickedcomplete}>Complete</button> :
                         <button className="btn btn-dark">Restore
                         </button>
                     }

@@ -19,14 +19,13 @@ class App extends React.Component {
     const filteredTasks = this.state.tasks.filter(tasks => {
       return tasks.id !== id;
     });
-    console.log(filteredTasks);
     this.setState({
       tasks: filteredTasks
     });
   }
 
+
   addNewTask = (name, furtherinfo , dateCompleted) => {
-    console.log (name, furtherinfo, dateCompleted);
     const newTask = {
       name: name,
       furtherinfo: furtherinfo,
@@ -37,7 +36,6 @@ class App extends React.Component {
 
     const copy = this.state.tasks.slice();
     copy.push(newTask);
-
     this.setState({
       tasks: copy
     });
