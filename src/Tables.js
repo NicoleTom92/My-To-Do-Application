@@ -6,8 +6,8 @@ class Tables extends React.Component {
     }
 
     handleComplete = () => {
-        this.props.completeTaskFunc(this.props.id);
-        alert ("Clicked complete, alerted from App.js");
+        this.props.completeTaskFunc(this.props.id)
+        alert ("clicked complete, alerted from App.js");
     }
 
     render() {
@@ -30,7 +30,7 @@ class Tables extends React.Component {
                 </div>
                 <div className="col-12 col-sm-2">
                     {this.props.available === true ?
-                        <button className="btn btn-dark book-button" onClick={this.handleComplete}>Complete
+                        <button className="btn btn-dark book-button" onClick ={this.handleComplete}>Complete
                         </button> :
                         <button className="btn btn-dark">Restore
                         </button>

@@ -24,6 +24,11 @@ class App extends React.Component {
     });
   }
 
+  completeTask = () => {
+    this.setState ( state => ({
+        id: !state.id
+      }))
+    }
 
   addNewTask = (name, furtherinfo , dateCompleted) => {
     const newTask = {
@@ -64,6 +69,7 @@ class App extends React.Component {
             return (
               <Tables
                 deleteTaskFunc={this.deleteTask}
+                completeTaskFunc={this.completeTask}
                 key={tasks.id}
                 available={tasks.available}
                 name={tasks.name}
@@ -80,6 +86,7 @@ class App extends React.Component {
           return (
             <Tables
               deleteTaskFunc={this.deleteTask}
+              completeTaskFunc={this.completeTask}
               key={tasks.id}
               available={tasks.available}
               name={tasks.name}
