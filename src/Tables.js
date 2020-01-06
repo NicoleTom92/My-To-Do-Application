@@ -14,11 +14,8 @@ class Tables extends React.Component {
         return (
 
             <div className="row">
-                <div className="col-12 col-sm-3">
+                <div className="col-12 col-sm-6">
                     <p>{this.props.name}</p>
-                </div>
-                <div className="col-12 col-sm-2">
-                    <p> {this.props.furtherinfo} </p>
                 </div>
 
                 <div className="col-12 col-sm-2">

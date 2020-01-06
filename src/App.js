@@ -9,9 +9,9 @@ import Addsection from "./Addsection"
 class App extends React.Component {
   state = {
     tasks: [
-      { name: "Task 1", furtherinfo:["Add comments"], available: true, dateCompleted: "01-01-2020", id: uuid() },
-      { name: "Task 2", furtherinfo:["Add comments"], available: true, dateCompleted: "01-02-2020", id: uuid()  },
-      { name: "Task 3", furtherinfo:["Add comments"], available: false, dateCompleted: "01-04-2020", id: uuid()  },
+      { name: "Task 1", completed: false, available: true, dateCompleted: "01-01-2020", id: uuid() },
+      { name: "Task 2", completed: false, available: true, dateCompleted: "01-02-2020", id: uuid()  },
+      { name: "Task 3", completed: false, available: false, dateCompleted: "01-04-2020", id: uuid()  },
     ],
   }
 
@@ -30,14 +30,15 @@ class App extends React.Component {
       }))
     }
 
-  addNewTask = (name, furtherinfo , dateCompleted) => {
+  addNewTask = (name, completed , dateCompleted) => {
     const newTask = {
       name: name,
-      furtherinfo: furtherinfo,
+      completed: completed,
       available: true,
       dateCompleted: dateCompleted,
       id: uuid()
     };
+
 
     const copy = this.state.tasks.slice();
     copy.push(newTask);
@@ -48,11 +49,11 @@ class App extends React.Component {
 
   render() {
     const Taskstocomplete = this.state.tasks.filter(tasks => {
-      return tasks.available === true;
+      return tasks.completed === false;
     });
 
     const Taskscompleted = this.state.tasks.filter(tasks => {
-      return tasks.available === false;
+      return tasks.completed === true;
     });
 
 

@@ -2,20 +2,13 @@ import React from "react";
 
 class Addsection extends React.Component {
     state = {
-        tasks: "",
-        furtherinfo: "",
+        task: "",
         dateCompleted: "2020-01-01",
     };
 
     updateTasks = (event) => {
         this.setState({
-            tasks: event.target.value
-        });
-    };
-
-    updatefurtherinfo = (event) => {
-        this.setState ({
-            furtherinfo: event.target.value
+            task: event.target.value
         });
     };
 
@@ -26,14 +19,10 @@ class Addsection extends React.Component {
     }
 
     AddTask = () => {
-        const TasksArray = this.state.tasks.split(",");
-        const filteredTasks = TasksArray.filter(tasks => {
-            return tasks.length > 0;
-        });
 
         this.props.addNewTaskFunc(
-            this.state.tasks,
-            filteredTasks,
+            this.state.task,
+            false,
             this.state.dateCompleted
         );
 
@@ -43,7 +32,7 @@ class Addsection extends React.Component {
         return (
             
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-6">
                         <input type="text"
                             onChange={this.updateTasks}
                             value={this.state.tasks}
@@ -51,16 +40,8 @@ class Addsection extends React.Component {
                             placeholder="Enter Task" />
                     </div>
 
-                    <div className="col-3">
-                    <input type="text"
-                        onChange={this.updatefurtherinfo}
-                        value={this.state.furtherinfo}
-                        className="form-control"
-                        placeholder=" Enter Comments" />
-                </div>
 
-
-                    <div className="col-3">
+                    <div className="col-4">
                         <input type="date"
                             className="form-control"
                             value={this.state.dateCompleted}
