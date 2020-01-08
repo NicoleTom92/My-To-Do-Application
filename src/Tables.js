@@ -12,30 +12,32 @@ class Tables extends React.Component {
 
     render() {
         return (
-
+            <div class = "taskstable">
             <div className="row">
-                <div className="col-12 col-sm-6">
+            
+                <div className="col-12 col-sm-4">
+                    
                     <p>{this.props.name}</p>
                 </div>
 
-                <div className="col-12 col-sm-2">
+                <div className="col-12 col-sm-4">
                     <p>{this.props.dateCompleted}</p>
                 </div>
                 <div className="col-12 col-sm-2">
-                    <button className="btn btn-dark" onClick={this.handleDelete}>Delete
+                    <button className="btn btn-dark" onClick={this.handleDelete}><i class="far fa-trash-alt"></i>
                     </button>
                 </div>
                 <div className="col-12 col-sm-2">
                     {this.props.available === true ?
-                        <button className="btn btn-dark book-button" onClick ={this.handleComplete}>Complete
+                        <button className="btn btn-dark book-button" onClick ={this.handleComplete}><i class="far fa-check-square"></i>
                         </button> :
-                        <button className="btn btn-dark">Restore
+                        <button className="btn btn-dark"><i class="far fa-check-square"></i>
                         </button>
                     }
 
                 </div>
             </div>
-
+            </div>
 
         )
     }

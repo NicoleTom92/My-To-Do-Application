@@ -30,7 +30,8 @@ class Addsection extends React.Component {
 
     render() {
         return (
-            
+               
+            <div className="container">
                 <div className="row">
                     <div className="col-6">
                         <input type="text"
@@ -39,7 +40,7 @@ class Addsection extends React.Component {
                             className="form-control"
                             placeholder="Enter Task" />
                     </div>
-
+                    
 
                     <div className="col-4">
                         <input type="date"
@@ -50,9 +51,10 @@ class Addsection extends React.Component {
 
                     <div className="addbutton">
                         <div className="col-2">
-                            <button className="btn btn-dark" onClick={this.AddTask}>Add</button>
+                            <button className="btn btn-dark" onClick={this.AddTask}><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
+                </div>
                 </div>
             
 

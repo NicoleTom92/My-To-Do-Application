@@ -6,9 +6,10 @@ body {
 
   .Heading {
     
-    margin-top: 220px;
+    margin-top: 270px;
     font-size: x-large;
     margin-bottom: 20px;
+    text-align: center;
   }
 
 
@@ -25,8 +26,40 @@ body {
     
 }
 
-.book-button {
-  width: 79px;
+
+ .taskstable {
+    height: 60px;
+    text-align: left;
+    
+  }
+
+.taskstocomplete {
+  text-align: center;
+  background-color: ;
 }
 
- 
+
+
+.taskscompletedheader {
+  background-color: #383838;
+  color: white;
+  text-align: center;
+  
+}
+
+.y1 {
+  color: white;
+  font: x-large;
+  background-color: #383838;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.y2 {
+
+  color: white;
+  font: x-large;
+  background-color: #383838;
+  text-align: center;
+  margin-bottom: 25px;
+}
