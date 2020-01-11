@@ -6,6 +6,7 @@ import './App.css';
 import Tables from "./Tables"
 import Addsection from "./Addsection"
 
+
 class App extends React.Component {
   state = {
     tasks: [
@@ -86,7 +87,7 @@ class App extends React.Component {
               available={tasks.available}
               name={tasks.name}
               furtherinfo={tasks.furtherinfo}
-              dateCompleted={tasks.dateCompleted}
+              dateCompleted= {tasks.dateCompleted}
               id={tasks.id}
 
             />
@@ -103,7 +104,7 @@ class App extends React.Component {
               available={tasks.available}
               name={tasks.name}
               furtherinfo={tasks.furtherinfo}
-              dateCompleted={tasks.dateCompleted}
+              dateCompleted= {tasks.dateCompleted}
               id={tasks.id}
             />
           )

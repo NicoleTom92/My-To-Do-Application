@@ -1,4 +1,6 @@
 import React from "react"
+import moment from "moment";
+
 
 class Tables extends React.Component {
     handleDelete = () => {
@@ -19,7 +21,7 @@ class Tables extends React.Component {
                     </div>
 
                     <div className="col-12 col-sm-4">
-                        <p>{this.props.dateCompleted}</p>
+                    <p>{this.props.dateCompleted}</p>
                     </div>
                     <div className="col-12 col-sm-2">
                         <button className="btn btn-dark" onClick={this.handleDelete}><i class="far fa-trash-alt"></i>

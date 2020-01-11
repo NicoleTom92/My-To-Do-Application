@@ -1,9 +1,10 @@
 import React from "react";
+import moment from "moment"; 
 
 class Addsection extends React.Component {
     state = {
         task: "",
-        dateCompleted: "2020-01-01",
+        dateCompleted: moment().format("YYYY-MM-DD")
     };
 
     updateTasks = (event) => {
