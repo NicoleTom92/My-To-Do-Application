@@ -24,11 +24,19 @@ class App extends React.Component {
     });
   }
 
-  completeTask = () => {
-    this.setState(state => ({
-      id: !state.id
-    }))
+  completeTask = id => {
+
+    const updatedtasks = this.state.tasks.map(task => {
+      if (task.id === id) {
+        task.completed = true;
+      }
+      return task;
+    });
+    this.setState({
+      tasks: updatedtasks
+    });
   }
+
 
   addNewTask = (name, completed, dateCompleted) => {
     const newTask = {
@@ -66,44 +74,44 @@ class App extends React.Component {
 
 
 
-        
-          <div className = "y1">Tasks To Complete</div>
-          {Taskstocomplete.map(tasks => {
 
-            return (
-              <Tables
-                deleteTaskFunc={this.deleteTask}
-                completeTaskFunc={this.completeTask}
-                key={tasks.id}
-                available={tasks.available}
-                name={tasks.name}
-                furtherinfo={tasks.furtherinfo}
-                dateCompleted={tasks.dateCompleted}
-                id={tasks.id}
+        <div className="y1">Tasks To Complete</div>
+        {Taskstocomplete.map(tasks => {
 
-              />
-            )
-          })}
+          return (
+            <Tables
+              deleteTaskFunc={this.deleteTask}
+              completeTaskFunc={this.completeTask}
+              key={tasks.id}
+              available={tasks.available}
+              name={tasks.name}
+              furtherinfo={tasks.furtherinfo}
+              dateCompleted={tasks.dateCompleted}
+              id={tasks.id}
 
-          <div className="y2">Tasks Completed</div>
-            {Taskscompleted.map(tasks => {
-              return (
-                <Tables
-                  deleteTaskFunc={this.deleteTask}
-                  completeTaskFunc={this.completeTask}
-                  key={tasks.id}
-                  available={tasks.available}
-                  name={tasks.name}
-                  furtherinfo={tasks.furtherinfo}
-                  dateCompleted={tasks.dateCompleted}
-                  id={tasks.id}
-                />
-              )
-            })}
+            />
+          )
+        })}
 
-          </div>
-        
-      
+        <div className="y2">Tasks Completed</div>
+        {Taskscompleted.map(tasks => {
+          return (
+            <Tables
+              deleteTaskFunc={this.deleteTask}
+              completeTaskFunc={this.completeTask}
+              key={tasks.id}
+              available={tasks.available}
+              name={tasks.name}
+              furtherinfo={tasks.furtherinfo}
+              dateCompleted={tasks.dateCompleted}
+              id={tasks.id}
+            />
+          )
+        })}
+
+      </div>
+
+
 
 
     );
