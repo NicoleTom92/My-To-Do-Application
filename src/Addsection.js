@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment"; 
+import moment from "moment";
 
 class Addsection extends React.Component {
     state = {
@@ -31,35 +31,35 @@ class Addsection extends React.Component {
 
     render() {
         return (
-               
+
             <div className="container">
                 <div className="row">
-                <div className="col-12 col-sm-6">
+                    <div className="col-12 col-sm-6">
                         <input type="text"
                             onChange={this.updateTasks}
                             value={this.state.tasks}
                             className="form-control"
                             placeholder="Enter Task" />
                     </div>
-                    
+
 
                     <div className="col-12 col-sm-4">
                         <input type="date"
                             className="form-control"
                             value={this.state.dateCompleted}
                             onChange={this.updateDate} />
-                            
+
                     </div>
 
-                   <div className="addbutton">
-                    <div className="col-12 col-sm-2">
+                    <div className="addbutton">
+                        <div className="col-12 col-sm-2">
                             <button className="btn btn-dark" onClick={this.AddTask}><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
-                </div>
-                
-            
+            </div>
+
+
 
         )
     }
